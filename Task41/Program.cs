@@ -21,7 +21,8 @@ void ReadNumber(string message)
     return;
  }
  
- 
+ else
+ {
    int number = Convert.ToInt32(Console.ReadLine());
    
     
@@ -32,7 +33,9 @@ void ReadNumber(string message)
       }
    
  
-  ReadNumber(message);   
+  
+ }  
+ ReadNumber(message); 
 }
 
 ReadNumber("Введите число:");
