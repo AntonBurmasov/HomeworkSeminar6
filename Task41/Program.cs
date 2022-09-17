@@ -11,32 +11,42 @@
 void ReadNumber(string message)
 {
  Console.WriteLine(message);
-  string  text = Console.ReadLine();
+   string text = Convert.ToString(Console.ReadLine());
   string stop = "stop";
    int count = 0;
-   
-   if(text == stop)
- {
-    Console.WriteLine($"Число больше 0 было введено {count} раз.");
-    return;
- }
+   if(text != stop)
+   {
  
- else
- {
-   int number = Convert.ToInt32(Console.ReadLine());
    
+   int number = Convert.ToInt32(text);
     
      if(number > 0)
      {
         count++;
  
-      }
-   
- 
+      } 
+
   
- }  
- ReadNumber(message); 
+    }
+
+
+   if(text == stop)
+   {
+     
+   
+   
+   Console.WriteLine($"Число больше ноля было введено {count} раз.");
+   return;
+   }  
+ ReadNumber(message);  
 }
+  
+
+
+
+
+ 
+
 
 ReadNumber("Введите число:");
 
