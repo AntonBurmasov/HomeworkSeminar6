@@ -6,39 +6,33 @@
 
 // 1, -7, 567, 89, 223-> 3
 
-
+// Долго думал, но так и не реализовал т.н. защиту от дурака, при вводе недопустимого значения, то есть не числа или слова stop, программа просто вылетает.
 
 void ReadNumber(string message)
 {
- Console.WriteLine(message);
-   string text = Convert.ToString(Console.ReadLine());
+ 
+ int count = 0;
+ 
+ while (true) 
+ {
+  Console.WriteLine(message);
+  string text = Console.ReadLine();
   string stop = "stop";
-   int count = 0;
-   if(text != stop)
-   {
- 
-   
+
+  if(text == stop)
+  {
+    Console.WriteLine($"Число больше ноля было введено {count} раз(а).");
+  return;
+  }
    int number = Convert.ToInt32(text);
-    
-     if(number > 0)
-     {
-        count++;
- 
-      } 
+   if(number > 0)
+  {
+    count++;
 
-  
-    }
-
-
-   if(text == stop)
-   {
-     
+  }
    
-   
-   Console.WriteLine($"Число больше ноля было введено {count} раз.");
-   return;
-   }  
- ReadNumber(message);  
+}  
+
 }
   
 
