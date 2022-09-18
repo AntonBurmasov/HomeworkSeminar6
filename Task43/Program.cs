@@ -31,18 +31,15 @@ double x = (b2 - b1)/(k1 - k2);
 
 double y = k1 * x + b1;
 
-double y2 = k2 * x + b2;
+
 x = Math.Round(x, 2);
 y = Math.Round(y, 2);
-y2 = Math.Round(y2, 2);
 
-if(y == y2)
-{
 
 Console.WriteLine($"Точка пересечения двух прямых равна {x} по оси X и {y} по оси Y.");
 
 
-}
+
 
 
 
