@@ -36,12 +36,6 @@ void ReadNumber(string message)
 }
   
 
-
-
-
- 
-
-
 ReadNumber("Введите число:");
 
 
