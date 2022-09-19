@@ -13,28 +13,10 @@ int ReadNumber(string message)
 
 void MethodForCheckingSides(int numA, int numB, int numC)
 {
- if(numA < numB + numC)
+ if(numA < numB + numC && numB < numA + numC && numC < numA + numB)
   { 
-    if(numB < numA + numC)
-    {
-      if(numC < numA + numB)
-      {
-        Console.WriteLine($"Треугольник со сторонами {numA} {numB} и {numC} может существовать.");
-
-      }
-       else
-      {
-        Console.WriteLine($"Треугольник со сторонами {numA} {numB} и {numC} существовать не может.");
-
-      }        
-    }
     
-     else
-     {
-    Console.WriteLine($"Треугольник со сторонами {numA} {numB} и {numC} существовать не может.");
-
-     }
-
+   Console.WriteLine($"Треугольник со сторонами {numA} {numB} и {numC} может существовать.");  
   }
   else
   {
