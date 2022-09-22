@@ -18,13 +18,14 @@ void ReadNumber(string message)
   Console.WriteLine(message);
   string text = Console.ReadLine();
   string stop = "stop";
-
+  
   if(text == stop)
   {
     Console.WriteLine($"Число больше ноля было введено {count} раз(а).");
   return;
   }
-   int number = Convert.ToInt32(text);
+   int.TryParse(text, out int number);
+   
    if(number > 0)
   {
     count++;
